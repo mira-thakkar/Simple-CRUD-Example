@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <th>Task</th>
-            <td>{!! Form::text('title',$task->task,array('class'=>'form-control')) !!}</td>
+            <td>{!! Form::text('task',$task->task,array('class'=>'form-control')) !!}</td>
         </tr>
         <tr>
             <th>Remove this Task?</th>

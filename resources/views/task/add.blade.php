@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <th>Task</th>
-            <td>{!! Form::text('title',null,array('class'=>'form-control')) !!}</td>
+            <td>{!! Form::text('task',null,array('class'=>'form-control')) !!}</td>
         </tr>
         </tbody>
     </table>

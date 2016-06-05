@@ -24,17 +24,28 @@ class TaskController extends Controller
     }
     public function postAdd(Request $request){
 //        Task will be added by AJAX or Form Submit!
+        $task = new Task();
+        $task->title = $request->title;
+        $task->task = $request->task;
+        $task->save();
+        return redirect('tasks');
     }
     public function getEdit(Request $request,$id){
 //        Page with prefilled form will be served
-
         $data['task'] = Task::find($id);
         return view('task.edit',$data);
     }
     public function postEdit(Request $request,$id){
 //        Task will be edited by AJAX or Form Submit
+        $task = Task::find($id);
+        $task->title = $request->title;
+        $task->task = $request->task;
+        $task->save();
+        return redirect('tasks/detail/'.$id);
     }
     public function postDelete(Request $request,$id){
 //        AJAX or Blank form with CSRF token will be submitted to delete a Task
+        Task::destroy($id);
+        return redirect('tasks');
     }
 }
