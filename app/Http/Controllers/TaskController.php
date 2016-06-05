@@ -19,13 +19,15 @@ class TaskController extends Controller
         return view('task.detail',$data);
     }
     public function getAdd(Request $request){
-//        Page to add will be served!
+//        Page to add will be served!\
+        return view('task.add');
     }
     public function postAdd(Request $request){
 //        Task will be added by AJAX or Form Submit!
     }
     public function getEdit(Request $request,$id){
 //        Page with prefilled form will be served
+
         $data['task'] = Task::find($id);
         return view('task.edit',$data);
     }

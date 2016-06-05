@@ -3,6 +3,9 @@
 @section('content')
 
     <h2>Tasks</h2>
+    <span class="pull-right">
+        <a class="btn btn-primary" href="{{url('tasks/add')}}">Add New</a>
+    </span>
     <p>This are the available tasks:</p>
     <table class="table table-hover">
         <thead>
@@ -24,7 +27,7 @@
                     <a class="btn btn-default" href="{{url('tasks/detail/'.$task->id)}}">View</a>
                     <a class="btn btn-default" href="{{url('tasks/edit/'.$task->id)}}">Edit</a>
                     {!! Form::open(['url'=>'tasks/delete/'.$task->id]) !!}
-                    </td>
+                </td>
                 <td>
                     <button type="submit" class="btn btn-danger" href="">Delete</button>
                     {!! Form::close() !!}

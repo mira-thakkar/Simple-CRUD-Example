@@ -9,11 +9,11 @@
         <thead>
         <tr>
             <th>Title</th>
-            <td>{!! Form::text('title',$task->title) !!}</td>
+            <td>{!! Form::text('title',$task->title,array('class'=>'form-control')) !!}</td>
         </tr>
         <tr>
             <th>Task</th>
-            <td>{!! Form::text('title',$task->task) !!}</td>
+            <td>{!! Form::text('title',$task->task,array('class'=>'form-control')) !!}</td>
         </tr>
         <tr>
             <th>Remove this Task?</th>
